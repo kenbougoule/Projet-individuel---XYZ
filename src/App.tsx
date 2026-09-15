@@ -3,12 +3,17 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import { initialTweets } from './data/tweets';
+import { TweetsList } from './components/TweetsList';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+     
+
     <>
+    <TweetsList tweets={initialTweets} />
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
@@ -117,6 +122,9 @@ function App() {
       <section id="spacer"></section>
     </>
   )
+
+  
+ 
 }
 
-export default App
+
