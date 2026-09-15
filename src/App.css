@@ -181,4 +181,10 @@
     right: 0;
     border-right-color: var(--border);
   }
+  .tweet-image {
+    max-height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    width: 100%;
+  }
 }

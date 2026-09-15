@@ -9,6 +9,7 @@ export type TweetPreviewProps = {
 export function TweetPreview ( {tweet}:TweetPreviewProps):  React.ReactElement{
     return (
         <div>
+            {tweet.image && <img src={tweet.image.url} alt={tweet.image.alt} className="tweet-image" />} {/* Affiche l'image uniquement si le tweet en possède une */}
             <p> {tweet.content} </p>
             <p> @{tweet.authorHandle} </p>
             <p> {tweet.authorName} </p>
@@ -18,5 +19,6 @@ export function TweetPreview ( {tweet}:TweetPreviewProps):  React.ReactElement{
         </div>
     )
 
+    
     
 }
