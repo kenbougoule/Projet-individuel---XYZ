@@ -82,6 +82,24 @@ export const initialTweets: Array<Tweet>  = [
     content: "Du code mal écrit me met de mauvaise humeur plus vite que n'importe quoi d'autre. La qualité n'est pas négociable, même sur un projet gratuit.",
     createdAt: "2026-06-24T18:00:00.000Z",
 },
+{
+    id: "a1b2c3d4-0011-4000-8000-000000000011",
+    authorName: "Ba Mariama",
+    authorHandle: "baaMariama",
+    content: "Pourquoi ne pas utiliser de la litératurature pour exprimer nos sentiments.",
+    createdAt: "2026-06-22T18:00:00.000Z",
+    parentId:"a1b2c3d4-0010-4000-8000-000000000010",
+
+},
+{
+    id: "a1b2c3d4-0012-4000-8000-000000000012",
+    authorName: "Diatta Aline Sitoé",
+    authorHandle: "diattaAline",
+    content: "une héroïne de la résistance sénégalaise et particulièrement de la Casamance .",
+    createdAt: "2026-06-23T18:00:00.000Z",
+    parentId: "a1b2c3d4-0009-4000-8000-000000000009",
+},
+
 
 ];
 
