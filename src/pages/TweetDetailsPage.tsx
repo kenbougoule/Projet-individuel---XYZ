@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 
 export function TweetDetailsPage(): ReactElement  {
     const { id } = useParams<{ id: string }>();
+    
+    
     const tweet: Tweet | undefined = initialTweets.find(
         (candidate) => candidate.id === id
     );
@@ -25,7 +27,7 @@ export function TweetDetailsPage(): ReactElement  {
     const replies = initialTweets.filter((candidate) => candidate.parentId === id);
     return(
     
-    <article>
+    <article  key = {id}>
       <TweetPreview  tweet={tweet}  linkToDetail = {false} />
       {replies.length > 0 ? <TweetsList tweets={replies} /> : <p>Aucune réponse</p>}
     </article>
