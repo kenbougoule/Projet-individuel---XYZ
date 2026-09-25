@@ -26,7 +26,7 @@ export function TweetDetailsPage(): ReactElement  {
     return(
     
     <article>
-      <TweetPreview  tweet={tweet} />
+      <TweetPreview  tweet={tweet}  linkToDetail = {false} />
       {replies.length > 0 ? <TweetsList tweets={replies} /> : <p>Aucune réponse</p>}
     </article>
     );
