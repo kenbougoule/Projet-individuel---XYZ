@@ -6,10 +6,11 @@ import { Link } from "react-router-dom";
 
 export type TweetPreviewProps = {
     tweet: Tweet;
+    linkToDetail? : boolean;
 
 }
 
-export function TweetPreview ( {tweet}:TweetPreviewProps):  React.ReactElement{
+export function TweetPreview ( {tweet, linkToDetail = true}:TweetPreviewProps):  React.ReactElement{
 
     const [isExpanded, setIsExpanded ] = useState(false); // État React qui indique si le tweet est développé (contenu complet visible) ou réduit (contenu tronqué)
     const isLong = tweet.content.length > 180;
@@ -18,15 +19,34 @@ export function TweetPreview ( {tweet}:TweetPreviewProps):  React.ReactElement{
     return (
         <div>
             
-        {tweet.image &&  (
+        
+
+        {tweet.image && (  
+            linkToDetail ? (
+
             <Link to={`/tweets/${tweet.id}`}>
-                 <img src={tweet.image.url} alt={tweet.image.alt} className="tweet-image" /> {/* Affiche l'image uniquement si le tweet en possède une */}
+
+                 <img src= { tweet.image.url} alt = {tweet.image.alt} className="tweet-image" />              
             </Link>
-            
-        )}
+
+        ) : (
+
+             <img src= { tweet.image.url} alt = {tweet.image.alt}  /> 
+         
+            )
+        )}    
+
+        
+
+            {linkToDetail ? (        
             <Link to={`/tweets/${tweet.id}`}>
                  <p> {displayedContent} </p>
             </Link>
+            ) : (  
+
+               <p> {displayedContent} </p> 
+
+            )}
 
                 {isLong && (<button onClick={() => setIsExpanded((etatActuel) => !etatActuel )}>
                    {isExpanded ? "Voir moins": "Voir plus"}
