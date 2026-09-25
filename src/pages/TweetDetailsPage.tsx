@@ -4,6 +4,8 @@ import type { Tweet } from "../types/Tweet";
 import { initialTweets } from "../data/tweets";
 import { TweetPreview } from "../components/TweetPreview";
 import { TweetsList } from "../components/TweetsList";
+import { Link } from "react-router-dom";
+
 
 export function TweetDetailsPage(): ReactElement  {
     const { id } = useParams<{ id: string }>();
@@ -11,7 +13,13 @@ export function TweetDetailsPage(): ReactElement  {
         (candidate) => candidate.id === id
     );
     if (tweet ===  undefined){
-        return<p>Ce tweet ne correspond pas</p>
+        return (
+        <div>
+        <p>Ce tweet n'existe  pas</p>
+        <Link to = "/">Retour à l'acceuil </Link>
+
+        </div>  
+    )
     } 
 
     const replies = initialTweets.filter((candidate) => candidate.parentId === id);
