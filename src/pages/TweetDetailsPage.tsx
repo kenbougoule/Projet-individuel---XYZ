@@ -29,7 +29,10 @@ export function TweetDetailsPage(): ReactElement  {
        <div>
         <nav>
 
-            <Link to="/">Acceuil</Link> &gt;<span>Détail du tweet</span>  
+            <Link to="/">Acceuil</Link> &gt;<span>Détail du tweet</span> 
+        
+
+
         </nav>
     
     <article  key = {id}>
