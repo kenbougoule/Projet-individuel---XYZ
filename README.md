@@ -44,29 +44,39 @@ Programmation Web - L3 MIASHS - 2026 / 2027
 
 ### TD 01 - Déclaration d'usage de l'IA générative
 
--Utilisation de Claude comme aide à la compréhension : explications de concepts React/TypeScript (JSX, props, useState, rendu conditionnel, différence entre `import` et `import type`), relecture de mon code avec identification des erreurs (sans réécriture automatique à ma place), et aide au diagnostic d'une erreur de compilation liée au cache du serveur de développement. Le code a été écrit par mes soins à chaque étape, avec vérification et compréhension de chaque proposition.
+-Utilisation de Claude comme aide à la compréhension : explications de concepts React/TypeScript (JSX, props, useState, rendu conditionnel, différence entre `import` et `import type`), relecture de mon code avec identification des erreurs (sans réécriture automatique à ma place), et aide au diagnostic d'une erreur de compilation liée au cache du serveur de développement.
 
 ## TD 02
 
 ### TD 02 - Élements réalisés
 
-- **à compléter**
+- Toutes les questions ont été répondu
 
 ### TD 02 - Bonus réalisés
 
-- **à compléter**
+- Toutes les questions bonnus on été faite
 
 ### TD 02 - Élements non réalisés
 
-- **à compléter**
+- Rien
 
 ### TD 02 - Difficultés rencontrées + Solutions appliquées
 
-- **à compléter**
+-- Confusion initiale entre le composant TweetsList et le tableau de données initialTweets lors du filtrage avec .filter().
+- Erreur de comparaison lors de la recherche des réponses (comparer un tweet entier à un id au lieu de comparer parentId à id).
+- Bug de synchronisation d'affichage lors de la navigation entre deux pages de détail différentes (l'URL changeait mais le contenu affiché restait celui de la page précédente), résolu en ajoutant une prop key basée sur l'id sur l'élément racine de TweetDetailsPage, ce qui force React à recréer le composant à chaque changement d'identifiant.
+- Distinction entre une route inconnue (gérée par le routeur, route *) et un tweet introuvable (donnée absente, géré dans le composant lui-même).
+
+### Solutions appliquées
+- Relecture progressive de chaque exemple du cours pour l'adapter précisément à la structure du projet (Tweet plutôt qu'Event, tweets plutôt qu'events).
+- Ajout temporaire d'un console.log pour diagnostiquer le problème de synchronisation avant de comprendre la cause réelle et d'appliquer la correction avec key={id}.
+- Vérification systématique avec bun run lint, bun tsc --noEmit et bun run build après chaque étape.
+
+
 
 ### TD 02 - Déclaration d'usage de l'IA générative
 
-- **à compléter**
+- Utilisation de Claude comme aide à la compréhension  : explications de concepts liés au routage (Link, Outlet, useParams, différence route inconnue/ressource introuvable), relecture de mon code avec identification des erreurs de logique (comparaisons incorrectes dans filter/find), et aide au diagnostic d'un bug de synchronisation d'affichage entre deux pages de détail (proposition de la solution key={id}, expliquée et appliquée par mes soins). 
 
 ## TD 03
 
