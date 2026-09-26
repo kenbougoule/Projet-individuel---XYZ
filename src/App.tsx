@@ -1,7 +1,7 @@
 
 import './App.css'
 
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 
 function App() {
   
@@ -10,9 +10,16 @@ function App() {
      
    <>
        <header>
+
          <h1>XYZ</h1>
+
        </header>
-       
+
+           <nav>
+            <Link to = "/">Acceuil</Link>
+            <Link to = "/a-propos">A propos</Link>
+           </nav>
+
        <Outlet/>
    </>
     

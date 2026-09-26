@@ -26,11 +26,18 @@ export function TweetDetailsPage(): ReactElement  {
 
     const replies = initialTweets.filter((candidate) => candidate.parentId === id);
     return(
+       <div>
+        <nav>
+
+            <Link to="/">Acceuil</Link> &gt;<span>Détail du tweet</span>  
+        </nav>
     
     <article  key = {id}>
       <TweetPreview  tweet={tweet}  linkToDetail = {false} />
       {replies.length > 0 ? <TweetsList tweets={replies} /> : <p>Aucune réponse</p>}
     </article>
+
+    </div>  
     );
 
 }
